@@ -9,7 +9,7 @@ export const sendOtp = async (req, res) => {
   res.json({ message: "OTP đã được gửi (xem console)!" });
 };
 
-// ✅ Xác thực OTP
+// ✅ Xác thực
 export const verifyOtp = async (req, res) => {
   const { phone, otp } = req.body;
   if (otpStore.get(phone) === otp) {
